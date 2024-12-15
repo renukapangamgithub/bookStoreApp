@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-function about() {
+function About() {
   const [activeSection, setActiveSection] = useState("mission");
 
   const sections = {
@@ -16,7 +16,7 @@ function about() {
     },
     values: {
       title: "Our Values",
-      content: `
+      content: `  
       - **Innovation**: Pushing boundaries to deliver cutting-edge solutions.  
       - **Integrity**: Upholding the highest standards of honesty and ethics.  
       - **Inclusivity**: Building products that serve everyone, everywhere.  
@@ -38,8 +38,8 @@ function about() {
             key={key}
             className={`px-4 py-2 mx-2 rounded-md ${
               activeSection === key
-                ? "bg-blue-500 text-white"
-                : "bg-gray-200 text-gray-800 hover:bg-blue-300"
+                ? "bg-pink-500 text-white"
+                : "bg-gray-200 text-gray-800 hover:bg-pink-300"
             }`}
             onClick={() => setActiveSection(key)}
           >
@@ -48,7 +48,7 @@ function about() {
         ))}
       </div>
 
-      <div className="p-4 bg-gray-50 border rounded-lg">
+      <div className="p-4 bg-gray-50 border rounded-lg mb-6">
         <h3 className="text-2xl font-semibold mb-3">
           {sections[activeSection].title}
         </h3>
@@ -56,8 +56,17 @@ function about() {
           {sections[activeSection].content}
         </p>
       </div>
+
+      <div className="text-center">
+        <button
+          className="px-6 py-2 text-white bg-pink-500 rounded-md hover:bg-pink-700 transition duration-200"
+          onClick={() => (window.location.href = "/")}
+        >
+          Go Back
+        </button>
+      </div>
     </div>
   );
 }
 
-export default about;
+export default About;
