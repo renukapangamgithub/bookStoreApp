@@ -15,7 +15,7 @@ function Contact() {
 
   const onSubmit = async (data) => {
     try {
-      const response = await axios.post("https://book-store-app-one-theta.vercel.app/api/contact", data);
+      const response = await axios.post("https://book-store-frontend-one-sigma.vercel.app/api/contact", data);
       toast.success("Message sent successfully!");
       // Redirect to success page
       navigate("/success");
