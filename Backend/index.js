@@ -8,7 +8,7 @@ import contactRoute from "./route/contact.route.js"
 const app = express();
 app.use(cors(
     {
-        origin: ["https://deploy-mern-1whq.vercel.app"],
+        origin: ["https://book-store-frontend-one-sigma.vercel.app"],
         methods: ["POST","GET"],
         credentials: true
     }
